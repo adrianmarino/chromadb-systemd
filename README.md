@@ -1,6 +1,6 @@
 # [Chroma](https://www.trychroma.com/) database systemd
 
-* Install chtoma database as systemd daemon. 
+* Install chroma database as systemd daemon. 
 * Run daemon with your regular user.
 
 ## Requirements
