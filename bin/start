@@ -1,0 +1,16 @@
+#!/bin/zsh
+# -----------------------------------------------------------------------------
+# Main
+# -----------------------------------------------------------------------------
+ABSPATH=$(readlink -f $0)
+ABSDIR=$(dirname $ABSPATH)
+
+source "$ABSDIR/../config.conf"
+source "$CONDA_PATH/etc/profile.d/conda.sh"
+
+echo "ENV: $ENV"
+conda activate $ENV
+
+echo "Start server..."
+chroma run --path "$ABSDIR/.." --port $PORT --host $HOST &
+# -----------------------------------------------------------------------------

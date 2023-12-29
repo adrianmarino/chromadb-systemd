@@ -1,0 +1,13 @@
+[Unit]
+Description=Chroma database for %u user
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=%h/chromadb
+ExecStart=%h/chromadb/bin/start
+ExecStop=%h/chromadb/bin/stop
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
